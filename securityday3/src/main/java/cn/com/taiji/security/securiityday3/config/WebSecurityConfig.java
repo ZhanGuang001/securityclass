@@ -70,9 +70,12 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                     httpServletResponse.setStatus(401);
                     httpServletResponse.getWriter().write("{用户名或密码错误}"); })
                 .permitAll()
-                .passwordParameter("password");//设置密码传参时的key值
+                .passwordParameter("password")//设置密码传参时的key值
+               /* .and()
+                .logout()*/;
               //.httpBasic();//进行basic登录
                 http.csrf().disable();//登录
+
     }
 
     /*@Bean

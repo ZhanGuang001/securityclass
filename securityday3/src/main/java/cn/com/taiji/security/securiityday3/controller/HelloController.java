@@ -15,15 +15,15 @@ import org.springframework.web.bind.annotation.ResponseBody;
 public class HelloController {
 
     @PostMapping("/index")
-    @ResponseBody
     public String index(){
-        return "hello world";
+        return "logout";
     }
 
     @GetMapping("/login")
     public String hello(){
         return "login";
     }
+
 
     @GetMapping("/user")
     @ResponseBody
