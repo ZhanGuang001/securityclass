@@ -17,10 +17,10 @@ Date: 2019-08-02 15:44:52
 INSERT INTO `user_domain` VALUES ('3', '1','ROLE_USER','u' );
 INSERT INTO `user_domain` VALUES ('4', '1','ROLE_ADMIN','a' );
 /*-- ----------------------------
--- Records of users
+-- Records of userInfo
 -- ----------------------------
-INSERT INTO `users` VALUES ('u', '$2a$10$j0T8C80mrdtDx5I1UL85teUtMY2/23UEb7kR5toVcvnbSqpsubgme', '1');
-INSERT INTO `users` VALUES ('a', '$2a$10$j0T8C80mrdtDx5I1UL85teUtMY2/23UEb7kR5toVcvnbSqpsubgme', '1');
+INSERT INTO `userInfo` VALUES ('u', '$2a$10$j0T8C80mrdtDx5I1UL85teUtMY2/23UEb7kR5toVcvnbSqpsubgme', '1');
+INSERT INTO `userInfo` VALUES ('a', '$2a$10$j0T8C80mrdtDx5I1UL85teUtMY2/23UEb7kR5toVcvnbSqpsubgme', '1');
 -- ----------------------------
 -- Records of authorities
 -- ----------------------------

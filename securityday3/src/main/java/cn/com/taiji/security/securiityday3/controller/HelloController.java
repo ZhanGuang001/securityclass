@@ -37,6 +37,11 @@ public class HelloController {
         return "admin";
     }
 
+    @GetMapping("/a")
+    @ResponseBody
+    public String a(){
+        return "a";
+    }
 
     // http method,url path
     // 1 = get /login , 2=post,login

@@ -41,8 +41,9 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .withUser("u").password(password).roles("user")
                 .and()
                 .withUser("a").password(password).roles("admin");*/
-        auth.jdbcAuthentication().dataSource(dataSource).and()
-                .userDetailsService(userDetail).passwordEncoder(passwordEncoder());
+//        auth.jdbcAuthentication().dataSource(dataSource).and()
+//                .userDetailsService(userDetail);
+        auth.userDetailsService(userDetail).passwordEncoder(passwordEncoder());
 
     }
 
@@ -52,9 +53,10 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
         http.authorizeRequests()
                 .antMatchers("/css/**","/error").permitAll()//对静态资源css通过验证
-                .antMatchers("/user").hasRole("user")//对user授权
-                .antMatchers("/admin").hasRole("admin")//对admin授权
-                .anyRequest().authenticated()//对所有请求都进行验证
+                /*.antMatchers("/user").hasRole("ROLE_USER")//对user授权
+                .antMatchers("/admin").hasRole("ROLE_ADMIN")//对admin授权*/
+                .anyRequest().access("@customerAuthService.canAccess(request,authentication)")
+               /* .anyRequest().authenticated()//对所有请求都进行验证*/
                 .and()//结束一种配置
                 .formLogin()//进行表单登录验证
                 .loginPage("/login")//进入自定义登录界面
@@ -79,11 +81,11 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         String password=passwordEncoder().encode("1");
         JdbcUserDetailsManager manager=new JdbcUserDetailsManager();
         manager.setDataSource(dataSource);
-        manager.createUser(User.withUsername("u")
+        manager.createUser(UserInfo.withUsername("u")
                 .password(password)
                 .roles("user")
                 .build());
-        manager.createUser(User.withUsername("a")
+        manager.createUser(UserInfo.withUsername("a")
                 .password(password)
                 .roles("admin")
                 .build());

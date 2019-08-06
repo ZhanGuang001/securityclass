@@ -52,4 +52,14 @@ public class UserInfo {
     public void setRoles(List<Roles> roles) {
         this.roles = roles;
     }
+
+    @Override
+    public String toString() {
+        return "UserInfo{" +
+                "uid=" + uid +
+                ", username='" + username + '\'' +
+                ", password='" + password + '\'' +
+                ", roles=" + roles +
+                '}';
+    }
 }

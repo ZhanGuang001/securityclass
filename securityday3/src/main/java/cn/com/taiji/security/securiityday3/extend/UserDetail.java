@@ -2,6 +2,7 @@ package cn.com.taiji.security.securiityday3.extend;
 
 import cn.com.taiji.security.securiityday3.domain.Roles;
 import cn.com.taiji.security.securiityday3.domain.UserInfo;
+import cn.com.taiji.security.securiityday3.repository.UserInfoRepository;
 import cn.com.taiji.security.securiityday3.service.UserInfoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
@@ -28,6 +29,9 @@ public class UserDetail implements UserDetailsService {
     private UserInfoService userInfoService;
 
     @Autowired
+    private UserInfoRepository userInfoRepository;
+
+    @Autowired
     private PasswordEncoder passwordEncoder;
 
     @Override
@@ -40,11 +44,11 @@ public class UserDetail implements UserDetailsService {
         }
         //定义权限列表.
         List<GrantedAuthority> authorities = new ArrayList<>();
-//用户可以访问的资源名称（或者说用户所拥有的权限）注意：必须"ROLE_"开头
-        for(Roles roles:userInfo.getRoles()) {
+       //用户可以访问的资源名称（权限）注意：必须"ROLE_"开头
+        for(Roles roles: userInfo.getRoles()) {
             authorities.add(new SimpleGrantedAuthority(roles.getRoleName()));
         }
-        User userDetails = new User(userInfo.getUsername(),passwordEncoder.encode(userInfo.getPassword()),authorities);
+        User userDetails = new User(userInfo.getUsername(),userInfo.getPassword(),authorities);
         return userDetails;
     }
 }
