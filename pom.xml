@@ -26,6 +26,7 @@
        <module>securityday4</module>
        <module>securityday5</module>
        <module>securityday6</module>
+       <module>securityday7</module>
    </modules>
 
 </project>
