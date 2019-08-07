@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>cross</title>
+</head>
+<body>
+跨域问题
+<input type="button" onclick="cros()" value="测试">
+</body>
+<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+
+</html>
+<script>
+    var cros=function () {
+        $.ajax({
+            url:"http://localhost:8080/b",
+            type:"get",
+            xhrFields: {
+                withCredentials: true
+            },
+            crossDomain: true,
+            success:function (rs) {
+                 location.href='http://localhost:8080';
+            },
+            error:function () {
+                console.info(rs)
+            }
+
+        })
+    }
+</script>
+
+
+
