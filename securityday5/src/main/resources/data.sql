@@ -18,6 +18,7 @@ insert into permission values ('1','/admin');
 insert into permission values ('2','/user');
 insert into permission values ('3','/a');
 insert into permission values ('4','/index');
+insert into permission values ('5','/b');
 
 --初始化permission_role
 insert into permission_role values ('1','1');
@@ -29,6 +30,7 @@ insert into permission_role values ('3','2');
 insert into permission_role values ('4','2');
 insert into permission_role values ('3','3');
 insert into permission_role values ('4','3');
+insert into permission_role values ('5','2');
 
 
 

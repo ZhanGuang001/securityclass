@@ -6,7 +6,8 @@
 </head>
 <body>
 跨域问题
-<input type="button" onclick="cros()" value="测试">
+<input type="button" onclick="cros()" value="get测试">
+<input type="button" onclick="cros2()" value="put测试">
 </body>
 <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
 
@@ -21,9 +22,31 @@
             },
             crossDomain: true,
             success:function (rs) {
-                 location.href='http://localhost:8080';
+                alert(rs)
+                 /*location.href='http://localhost:8080';*/
             },
             error:function () {
+                console.info(rs)
+            }
+
+        })
+    }
+
+    var cros2=function () {
+        $.ajax({
+            url:"http://localhost:8080/b",
+            type:"put",
+            data:{username:"qiao",gender:"man"},
+            xhrFields: {
+                withCredentials: true
+            },
+            crossDomain: true,
+            success:function (rs) {
+                debugger
+                alert(rs)
+            },
+            error:function (rs) {
+                debugger
                 console.info(rs)
             }
 

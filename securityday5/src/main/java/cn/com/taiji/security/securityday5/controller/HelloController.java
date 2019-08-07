@@ -1,11 +1,12 @@
 package cn.com.taiji.security.securityday5.controller;
 
+import com.sun.javafx.collections.MappingChange;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
+
+import java.util.Map;
 
 /**
  * @program: security
@@ -52,6 +53,10 @@ public class HelloController {
     public String b(){
         return "访问成功";}
 
+    @PutMapping("/b")
+    @ResponseBody
+    public String bb(@RequestParam Map map){
+        return "增加成功";}
 
     // http method,url path
     // 1 = get /login , 2=post,login
