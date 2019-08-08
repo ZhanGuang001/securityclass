@@ -1,6 +1,6 @@
-package cn.com.taiji.security.securiityday4.repository;
+package cn.com.taiji.security.securityday4.repository;
 
-import cn.com.taiji.security.securiityday4.domain.Permission;
+import cn.com.taiji.security.securityday4.domain.Permission;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface PermissionRepository extends JpaRepository<Permission,Long> {

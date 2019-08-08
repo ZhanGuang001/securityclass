@@ -1,4 +1,4 @@
-package cn.com.taiji.security.securiityday4;
+package cn.com.taiji.security.securityday4;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

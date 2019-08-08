@@ -1,8 +1,8 @@
-package cn.com.taiji.security.securiityday4.service.Impl;
+package cn.com.taiji.security.securityday4.service.Impl;
 
-import cn.com.taiji.security.securiityday4.domain.UserInfo;
-import cn.com.taiji.security.securiityday4.repository.UserInfoRepository;
-import cn.com.taiji.security.securiityday4.service.UserInfoService;
+import cn.com.taiji.security.securityday4.domain.UserInfo;
+import cn.com.taiji.security.securityday4.repository.UserInfoRepository;
+import cn.com.taiji.security.securityday4.service.UserInfoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

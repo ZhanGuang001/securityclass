@@ -1,4 +1,4 @@
-package cn.com.taiji.security.securiityday4.controller;
+package cn.com.taiji.security.securityday4.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;

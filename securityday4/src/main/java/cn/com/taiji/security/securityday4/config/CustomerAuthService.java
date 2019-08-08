@@ -1,8 +1,8 @@
-package cn.com.taiji.security.securiityday4.config;
+package cn.com.taiji.security.securityday4.config;
 
-import cn.com.taiji.security.securiityday4.domain.Permission;
-import cn.com.taiji.security.securiityday4.domain.Roles;
-import cn.com.taiji.security.securiityday4.repository.PermissionRepository;
+import cn.com.taiji.security.securityday4.domain.Permission;
+import cn.com.taiji.security.securityday4.domain.Roles;
+import cn.com.taiji.security.securityday4.repository.PermissionRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.GrantedAuthority;

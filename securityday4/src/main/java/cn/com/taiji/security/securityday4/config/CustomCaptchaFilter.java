@@ -1,4 +1,4 @@
-package cn.com.taiji.security.securiityday4.config;
+package cn.com.taiji.security.securityday4.config;
 
 /**
  * @program: securityclass
@@ -8,7 +8,6 @@ package cn.com.taiji.security.securiityday4.config;
  */
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.web.authentication.AuthenticationFailureHandler;
 import org.springframework.stereotype.Component;
 import org.springframework.util.StringUtils;

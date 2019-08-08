@@ -1,6 +1,6 @@
-package cn.com.taiji.security.securiityday4.repository;
+package cn.com.taiji.security.securityday4.repository;
 
-import cn.com.taiji.security.securiityday4.domain.UserInfo;
+import cn.com.taiji.security.securityday4.domain.UserInfo;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 

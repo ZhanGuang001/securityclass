@@ -1,10 +1,9 @@
-package cn.com.taiji.security.securiityday4.extend;
+package cn.com.taiji.security.securityday4.extend;
 
-import cn.com.taiji.security.securiityday4.domain.Roles;
-import cn.com.taiji.security.securiityday4.domain.UserInfo;
-import cn.com.taiji.security.securiityday4.repository.UserInfoRepository;
-import cn.com.taiji.security.securiityday4.service.UserInfoService;
-import cn.com.taiji.security.securiityday4.service.UserInfoService;
+import cn.com.taiji.security.securityday4.domain.Roles;
+import cn.com.taiji.security.securityday4.domain.UserInfo;
+import cn.com.taiji.security.securityday4.repository.UserInfoRepository;
+import cn.com.taiji.security.securityday4.service.UserInfoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;

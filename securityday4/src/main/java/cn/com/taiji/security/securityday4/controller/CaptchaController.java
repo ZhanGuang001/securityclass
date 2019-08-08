@@ -1,4 +1,4 @@
-package cn.com.taiji.security.securiityday4.controller;
+package cn.com.taiji.security.securityday4.controller;
 
 /**
  * @program: securityclass
@@ -6,7 +6,7 @@ package cn.com.taiji.security.securiityday4.controller;
  * @author: qiao zhan guang
  * @create: 2019-08-07 00:00
  */
-import cn.com.taiji.security.securiityday4.config.WebSecurityConfig;
+import cn.com.taiji.security.securityday4.config.WebSecurityConfig;
 import com.google.code.kaptcha.Producer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

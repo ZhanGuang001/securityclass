@@ -1,4 +1,4 @@
-package cn.com.taiji.security.securiityday4.domain;
+package cn.com.taiji.security.securityday4.domain;
 
 import javax.persistence.*;
 import java.util.List;

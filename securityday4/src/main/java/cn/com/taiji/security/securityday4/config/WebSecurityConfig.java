@@ -1,6 +1,6 @@
-package cn.com.taiji.security.securiityday4.config;
+package cn.com.taiji.security.securityday4.config;
 
-import cn.com.taiji.security.securiityday4.extend.UserDetail;
+import cn.com.taiji.security.securityday4.extend.UserDetail;
 import com.google.code.kaptcha.Producer;
 import com.google.code.kaptcha.impl.DefaultKaptcha;
 import com.google.code.kaptcha.util.Config;
@@ -17,7 +17,6 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.authentication.ForwardAuthenticationSuccessHandler;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
-import javax.sql.DataSource;
 import java.util.Properties;
 
 
